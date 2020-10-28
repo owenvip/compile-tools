@@ -24,7 +24,7 @@
   },
   "author": "owenwong <owen.wong.cn@gmail.com>",
   "license": "MIT",
-  "devDependencies": {
+  "dependencies": {
     "@otools/babel-preset-config": "0.0.0",
     "@otools/eslint-typescript-config": "0.0.0",
     "@otools/jest-preset-config": "0.0.0",
