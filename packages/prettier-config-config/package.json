@@ -1,0 +1,27 @@
+{
+  "name": "@otools/prettier-config-config",
+  "version": "0.0.0",
+  "description": "prettier config",
+  "author": "owenwong <owen.wong.cn@gmail.com>",
+  "license": "MIT",
+  "main": "lib/index.js",
+  "directories": {
+    "lib": "lib"
+  },
+  "files": [
+    "lib"
+  ],
+  "publishConfig": {
+    "access": "public"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/owenvip/react-compile-tools.git"
+  },
+  "scripts": {
+    "test": "echo \"Error: run tests from root\" && exit 1"
+  },
+  "dependencies": {
+    "prettier": "^2.1.2"
+  }
+}

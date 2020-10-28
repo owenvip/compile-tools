@@ -1,0 +1,31 @@
+{
+  "name": "@otools/jest-preset-config",
+  "version": "0.0.0",
+  "description": "jest preset config",
+  "keywords": [
+    "jest",
+    "preset"
+  ],
+  "author": "owenwong <owen.wong.cn@gmail.com>",
+  "license": "MIT",
+  "main": "lib/index.js",
+  "files": [
+    "lib",
+    "jest-preset.js"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/owenvip/react-compile-tools.git"
+  },
+  "scripts": {
+    "test": "echo \"Error: run tests from root\" && exit 1"
+  },
+  "dependencies": {
+    "@types/jest": "^26.0.15",
+    "babel-jest": "^26.6.1",
+    "identity-obj-proxy": "^3.0.0",
+    "jest": "^26.6.1",
+    "jest-canvas-mock": "^2.3.0",
+    "regenerator-runtime": "^0.13.7"
+  }
+}

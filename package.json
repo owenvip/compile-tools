@@ -1,0 +1,50 @@
+{
+  "name": "@otools/react-compile-tools",
+  "version": "0.0.0",
+  "description": "react compile tools",
+  "main": "bin/index.js",
+  "scripts": {
+    "test": "jest",
+    "lint": "eslint ./packages --ext=.js",
+    "lint:fix": "eslint ./packages --ext=.js --fix",
+    "release": "lerna publish --conventional-commits --yes",
+    "build": "lerna run build",
+    "postinstall": "lerna bootstrap"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/owenvip/react-compile-tools.git"
+  },
+  "keywords": [
+    "cli",
+    "react"
+  ],
+  "author": "owenwong <owen.wong.cn@gmail.com>",
+  "license": "MIT",
+  "devDependencies": {
+    "@otools/babel-preset-config": "0.0.0",
+    "@otools/eslint-typescript-config": "0.0.0",
+    "@otools/jest-preset-config": "0.0.0",
+    "@otools/prettier-config-config": "0.0.0",
+    "@otools/stylelint-config-config": "0.0.0",
+    "eslint": "^7.12.1",
+    "husky": "^4.3.0",
+    "lerna": "^3.22.1",
+    "lint-staged": "^10.5.0",
+    "prettier": "^2.1.2",
+    "typescript": "^4.0.5"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged"
+    }
+  },
+  "lint-staged": {
+    "*.js": [
+      "eslint --fix"
+    ],
+    "*.{json,md}": [
+      "prettier --write"
+    ]
+  }
+}
