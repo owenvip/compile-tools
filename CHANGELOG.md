@@ -3,6 +3,22 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# 0.1.0 (2020-10-28)
+
+
+### Bug Fixes
+
+* fix dependencies ([4da2945](https://github.com/owenvip/react-compile-tools/commit/4da29451493e1477bba0f9211b95a6a028285b03))
+
+
+### Features
+
+* update all tools ([d04314c](https://github.com/owenvip/react-compile-tools/commit/d04314c3b078769266a58ec630ff8050cdcba7f6))
+
+
+
+
+
 ## [1.11.6](https://github.com/open-data-plan/pangu/compare/v1.11.5...v1.11.6) (2020-10-28)
 
 **Note:** Version bump only for package pangu
