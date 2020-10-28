@@ -19,6 +19,9 @@
     "cli",
     "react"
   ],
+  "publishConfig": {
+    "access": "public"
+  },
   "author": "owenwong <owen.wong.cn@gmail.com>",
   "license": "MIT",
   "devDependencies": {

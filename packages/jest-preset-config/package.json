@@ -13,6 +13,9 @@
     "lib",
     "jest-preset.js"
   ],
+  "publishConfig": {
+    "access": "public"
+  },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/owenvip/react-compile-tools.git"
