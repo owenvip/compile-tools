@@ -1,6 +1,6 @@
 {
   "name": "@otools/react-compile-tools",
-  "version": "0.0.0",
+  "version": "0.0.2",
   "description": "react compile tools",
   "main": "bin/index.js",
   "scripts": {
@@ -25,11 +25,11 @@
   "author": "owenwong <owen.wong.cn@gmail.com>",
   "license": "MIT",
   "dependencies": {
-    "@otools/babel-preset-config": "0.0.0",
-    "@otools/eslint-typescript-config": "0.0.0",
-    "@otools/jest-preset-config": "0.0.0",
-    "@otools/prettier-config-config": "0.0.0",
-    "@otools/stylelint-config-config": "0.0.0",
+    "@otools/babel-preset-config": "0.1.1",
+    "@otools/eslint-typescript-config": "0.1.1",
+    "@otools/jest-preset-config": "0.1.1",
+    "@otools/prettier-config-config": "0.1.1",
+    "@otools/stylelint-config-config": "0.1.1",
     "eslint": "^7.12.1",
     "husky": "^4.3.0",
     "lerna": "^3.22.1",
