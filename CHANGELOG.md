@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.1.2](https://github.com/owenvip/react-compile-tools/compare/v0.1.0...v0.1.2) (2020-10-29)
+
+
+### Bug Fixes
+
+* fix version ([6784008](https://github.com/owenvip/react-compile-tools/commit/67840084adc69c1437f927782e36924290b2a2ac))
+
+
+
+
+
 # 0.1.0 (2020-10-28)
 
 
