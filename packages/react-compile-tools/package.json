@@ -3,13 +3,6 @@
   "version": "0.0.2",
   "description": "react compile tools",
   "main": "bin/index.js",
-  "scripts": {
-    "test": "jest",
-    "lint": "eslint ./packages --ext=.js",
-    "lint:fix": "eslint ./packages --ext=.js --fix",
-    "release": "lerna publish --conventional-commits --yes",
-    "build": "lerna run build"
-  },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/owenvip/react-compile-tools.git"
@@ -35,18 +28,5 @@
     "lint-staged": "^10.5.0",
     "prettier": "^2.1.2",
     "typescript": "^4.0.5"
-  },
-  "husky": {
-    "hooks": {
-      "pre-commit": "lint-staged"
-    }
-  },
-  "lint-staged": {
-    "*.js": [
-      "eslint --fix"
-    ],
-    "*.{json,md}": [
-      "prettier --write"
-    ]
   }
 }
