@@ -10,14 +10,10 @@ const Webpackbar = require('webpackbar')
 const workDir = process.cwd()
 const srcDir = path.resolve(workDir, 'src')
 const publicDir = path.resolve(workDir, 'public')
-const entries = [path.resolve(workDir, 'src/index')]
 const PROD = process.env.NODE_ENV === 'production'
 const appConfig = JSON.parse(
   fs.readFileSync(path.join(workDir, 'app.json'), 'utf8')
 )
-
-PROD ||
-  entries.push('webpack-hot-middleware/client?reload=true&path=/__webpack_hmr')
 
 function getCssLoader() {
   const baseLoaders = [
@@ -68,19 +64,15 @@ function getCssLoader() {
 }
 
 module.exports = {
-  entry: entries,
+  entry: path.resolve(workDir, 'src/index'),
   output: {
-    path: path.resolve(workDir, 'build'), // 将文件打包到此目录下
-    publicPath: '/', // 在生成的html中，文件的引入路径会相对于此地址，生成的css中，以及各类图片的URL都会相对于此地址
-    filename: 'dist/[name].[chunkhash:8].js',
-    chunkFilename: 'dist/[name].[chunkhash:8].chunk.js',
+    path: path.resolve(workDir, 'build'), 
+    publicPath: '/', 
+    filename: PROD ? '[name].[contenthash].js' : '[name].js',
+    chunkFilename: PROD ? '[id].[contenthash].js' : '[id].js',
   },
-  devtool: 'eval-source-map', // 报错的时候在控制台输出哪一行报错
-  optimization: {
-    splitChunks: {
-      chunks: 'all',
-    },
-  },
+  devtool: 'eval-cheap-module-source-map', 
+  target: PROD ? 'browserslist' : 'web',
   module: {
     rules: [
       ...getCssLoader(),
@@ -127,19 +119,17 @@ module.exports = {
   },
   plugins: [
     new Webpackbar(),
-    new AntdDayjsWebpackPlugin(), // dayjs 替代 momentjs
+    new AntdDayjsWebpackPlugin(), 
     new webpack.DefinePlugin({
       'process.env': PROD ? 'prod' : 'dev',
     }),
     new HtmlWebpackPlugin({
-      // 根据模板插入css/js等生成最终HTML
-      filename: 'index.html', // 生成的html存放路径，相对于 output.path
-      favicon: publicDir + '/favicon.png', // 自动把根目录下的favicon.ico图片加入html
-      template: publicDir + '/index.html', // html模板路径
-      inject: true, // 是否将js放在body的末尾
+      filename: 'index.html', 
+      favicon: publicDir + '/favicon.png', 
+      template: publicDir + '/index.html', 
+      inject: true, 
       hash: !PROD,
     }),
-    // 拷贝public中的文件到最终打包文件夹里
     new CopyPlugin({
       patterns: [
         {
@@ -164,7 +154,7 @@ module.exports = {
       '.css',
       '.less',
       '.wasm',
-    ], // 后缀名自动补全
+    ],
     alias: {
       '@': srcDir,
     },
