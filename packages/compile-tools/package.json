@@ -1,6 +1,6 @@
 {
   "name": "@otools/compile-tools",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "description": "react compile tools",
   "main": "bin/index.js",
   "repository": {
@@ -20,11 +20,11 @@
   "author": "owenwong <owen.wong.cn@gmail.com>",
   "license": "MIT",
   "dependencies": {
-    "@otools/babel-preset-otool": "^0.0.2",
-    "@otools/eslint-config-otool": "^0.0.2",
-    "@otools/jest-preset-otool": "^0.0.2",
-    "@otools/prettier-config-otool": "^0.0.2",
-    "@otools/stylelint-config-otool": "^0.0.2",
+    "@otools/babel-preset-otool": "^0.0.3",
+    "@otools/eslint-config-otool": "^0.0.3",
+    "@otools/jest-preset-otool": "^0.0.3",
+    "@otools/prettier-config-otool": "^0.0.3",
+    "@otools/stylelint-config-otool": "^0.0.3",
     "antd-dayjs-webpack-plugin": "^1.0.1",
     "autoprefixer": "^10.0.1",
     "babel-eslint": "^10.1.0",
