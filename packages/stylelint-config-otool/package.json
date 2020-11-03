@@ -1,6 +1,6 @@
 {
   "name": "@otools/stylelint-config-otool",
-  "version": "0.0.3",
+  "version": "0.0.4",
   "description": "stylelint config",
   "author": "owenwong <owen.wong.cn@gmail.com>",
   "license": "MIT",
