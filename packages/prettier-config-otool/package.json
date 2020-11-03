@@ -20,8 +20,5 @@
   },
   "scripts": {
     "test": "echo \"Error: run tests from root\" && exit 1"
-  },
-  "dependencies": {
-    "prettier": "^2.1.2"
   }
 }

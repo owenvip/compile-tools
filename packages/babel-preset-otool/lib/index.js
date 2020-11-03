@@ -50,8 +50,7 @@ module.exports = declare(
                 useESModules: true,
               },
             ],
-            '@babel/plugin-proposal-class-properties',
-            'react-refresh/babel',
+            '@babel/plugin-proposal-class-properties'
           ],
         },
         test: {
