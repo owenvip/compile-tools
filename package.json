@@ -19,7 +19,8 @@
     "react"
   ],
   "publishConfig": {
-    "access": "public"
+    "access": "public",
+    "registry": "https://registry.npmjs.org"
   },
   "author": "owenwong <owen.wong.cn@gmail.com>",
   "license": "MIT",
