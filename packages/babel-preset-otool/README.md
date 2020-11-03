@@ -1,11 +1,11 @@
-# `@otools/babel-preset-config`
+# `@otools/babel-preset-otool`
 
 ## Usage
 
 ```js
 // babel.config.js
 module.exports = {
-  presets: ['@otools/babel-preset-config'],
+  presets: ['@otools/babel-preset-otool'],
 }
 ```
 

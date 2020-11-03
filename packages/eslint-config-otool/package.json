@@ -1,6 +1,6 @@
 {
-  "name": "@otools/eslint-typescript-config",
-  "version": "0.1.2",
+  "name": "@otools/eslint-config-otool",
+  "version": "0.0.0",
   "description": "eslint config",
   "author": "owenwong <owen.wong.cn@gmail.com>",
   "license": "MIT",

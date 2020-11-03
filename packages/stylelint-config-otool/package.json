@@ -1,12 +1,13 @@
 {
-  "name": "@otools/prettier-config-config",
-  "version": "0.1.2",
-  "description": "prettier config",
+  "name": "@otools/stylelint-config-otool",
+  "version": "0.0.0",
+  "description": "stylelint config",
   "author": "owenwong <owen.wong.cn@gmail.com>",
   "license": "MIT",
   "main": "lib/index.js",
   "directories": {
-    "lib": "lib"
+    "lib": "lib",
+    "test": "__tests__"
   },
   "files": [
     "lib"
@@ -22,6 +23,15 @@
     "test": "echo \"Error: run tests from root\" && exit 1"
   },
   "dependencies": {
+    "stylelint": "^13.7.2",
+    "stylelint-config-prettier": "^8.0.2",
+    "stylelint-config-standard": "^20.0.0",
+    "stylelint-prettier": "^1.1.2"
+  },
+  "peerDependencies": {
+    "prettier": "^2.0.0"
+  },
+  "devDependencies": {
     "prettier": "^2.1.2"
   }
 }
