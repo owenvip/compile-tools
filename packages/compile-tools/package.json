@@ -12,7 +12,7 @@
     "react"
   ],
   "files": [
-    "lib"
+    "bin"
   ],
   "publishConfig": {
     "access": "public"
