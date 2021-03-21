@@ -1,1 +1,1 @@
-require('regenerator-runtime')
+require("regenerator-runtime");

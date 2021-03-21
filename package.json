@@ -25,6 +25,7 @@
   "author": "owenwong <owen.wong.cn@gmail.com>",
   "license": "MIT",
   "dependencies": {
+    "@otools/eslint-config-otool": "0.0.4",
     "eslint": "^7.12.1",
     "husky": "^4.3.0",
     "lerna": "^3.22.1",

@@ -1,3 +1,3 @@
-const preset = require('./lib')
+const preset = require("./lib");
 
-module.exports = preset
+module.exports = preset;
