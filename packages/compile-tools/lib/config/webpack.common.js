@@ -1,14 +1,14 @@
-const path = require("path");
 const webpack = require("webpack");
 const { VueLoaderPlugin } = require("vue-loader/dist/index");
 const HtmlWebpackPlugin = require("html-webpack-plugin");
 const { resolve } = require("path");
 const CopyWebpackPlugin = require("copy-webpack-plugin");
 const ForkTsCheckerWebpackPlugin = require("fork-ts-checker-webpack-plugin");
-const WorkboxPlugin = require("workbox-webpack-plugin");
+
+const { staticDir, entry, tplFile } = require("./paths.js");
 
 module.exports = {
-  entry: ["./src/index.ts"],
+  entry: [entry],
   module: {
     rules: [
       {
@@ -49,28 +49,20 @@ module.exports = {
   plugins: [
     new VueLoaderPlugin(),
     new HtmlWebpackPlugin({
-      template: path.resolve(__dirname, "../index.html"),
+      template: tplFile,
     }),
     new CopyWebpackPlugin({
       patterns: [
         {
-          from: path.resolve(__dirname, "../static"),
+          from: staticDir,
           to: "static",
         },
       ],
     }),
     new webpack.DefinePlugin({
-      "process.env": {
-        BASE_URL: JSON.stringify("http://localhost:9000"),
-      },
+      "process.env": {},
       __VUE_OPTIONS_API__: true,
       __VUE_PROD_DEVTOOLS__: false,
-    }),
-    new WorkboxPlugin.GenerateSW({
-      clientsClaim: true,
-      skipWaiting: true,
-      exclude: [/\.map$/, /asset-manifest\.json$/],
-      maximumFileSizeToCacheInBytes: 5000000,
     }),
     new ForkTsCheckerWebpackPlugin(),
   ],

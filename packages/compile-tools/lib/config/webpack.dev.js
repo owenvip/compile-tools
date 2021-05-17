@@ -1,6 +1,6 @@
 const { merge } = require("webpack-merge");
 const common = require("./webpack.common.js");
-const path = require("path");
+const { distDir, tplFile } = require("./paths.js");
 
 module.exports = merge(common, {
   mode: "development",
@@ -12,18 +12,18 @@ module.exports = merge(common, {
   devServer: {
     port: 3000,
     hot: true,
-    contentBase: "../dist",
+    contentBase: distDir,
     overlay: true,
     open: true,
     stats: "errors-only",
     compress: true, // 为每个静态文件开启 gzip compression
     historyApiFallback: {
-      rewrites: [{ from: /./, to: "/index.html" }],
+      rewrites: [{ from: /./, to: tplFile }],
     },
   },
   output: {
     filename: "js/[name].[chunkhash].js",
-    path: path.resolve(__dirname, "../dist"),
+    path: distDir,
   },
   module: {
     rules: [

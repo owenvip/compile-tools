@@ -1,9 +1,10 @@
-const path = require("path");
 const MiniCssExtractPlugin = require("mini-css-extract-plugin");
 const CssMinimizerPlugin = require("css-minimizer-webpack-plugin");
 const UglifyJsPlugin = require("uglifyjs-webpack-plugin");
 const { merge } = require("webpack-merge");
 const common = require("./webpack.common.js");
+const { workDir, distDir } = require("./paths.js");
+const WorkboxPlugin = require("workbox-webpack-plugin");
 
 module.exports = merge(common, {
   mode: "production",
@@ -48,11 +49,19 @@ module.exports = merge(common, {
             options: {
               // you can specify a publicPath here
               // by default it use publicPath in webpackOptions.output
-              publicPath: "../",
+              publicPath: workDir,
             },
           },
           "css-loader",
-          "postcss-loader",
+          {
+            loader: "postcss-loader",
+            options: {
+              sourceMap: true,
+              postcssOptions: {
+                plugins: [require("autoprefixer")],
+              },
+            },
+          },
           "less-loader",
         ],
       },
@@ -67,10 +76,16 @@ module.exports = merge(common, {
       filename: "css/[name].[contenthash].css",
       chunkFilename: "css/[name].[contenthash].css",
     }),
+    new WorkboxPlugin.GenerateSW({
+      clientsClaim: true,
+      skipWaiting: true,
+      exclude: [/\.map$/, /asset-manifest\.json$/],
+      maximumFileSizeToCacheInBytes: 5000000,
+    }),
   ],
   output: {
     filename: "js/[name].[contenthash].js",
-    path: path.resolve(__dirname, "../dist"),
+    path: distDir,
     environment: {
       arrowFunction: false,
       destructuring: false,

@@ -1,3 +1,3 @@
 # compile-tools
 
-> compile tools for react
+> compile tools
