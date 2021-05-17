@@ -1,6 +1,6 @@
 {
   "name": "@otools/prettier-config-otool",
-  "version": "0.0.5",
+  "version": "0.0.6",
   "description": "prettier config",
   "author": "owenwong <owen.wong.cn@gmail.com>",
   "license": "MIT",
