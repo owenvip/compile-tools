@@ -11,6 +11,7 @@ module.exports = merge(common, {
   },
   devServer: {
     port: 3000,
+    host: "127.0.0.1",
     hot: true,
     contentBase: distDir,
     overlay: true,
@@ -22,8 +23,7 @@ module.exports = merge(common, {
     },
   },
   output: {
-    filename: "js/[name].[chunkhash].js",
-    path: distDir,
+    filename: "[name].[chunkhash].js",
   },
   module: {
     rules: [
