@@ -8,7 +8,7 @@ const ForkTsCheckerWebpackPlugin = require("fork-ts-checker-webpack-plugin");
 const { staticDir, entry, tplFile } = require("./paths.js");
 
 module.exports = {
-  entry: [entry],
+  entry: ["regenerator-runtime/runtime.js", entry],
   module: {
     rules: [
       {

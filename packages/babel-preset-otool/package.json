@@ -24,11 +24,12 @@
     "@babel/plugin-proposal-object-rest-spread": "^7.14.2",
     "@babel/plugin-proposal-optional-chaining": "^7.14.2",
     "@babel/plugin-syntax-dynamic-import": "^7.8.3",
-    "@babel/plugin-transform-runtime": "^7.14.2",
+    "@babel/plugin-transform-runtime": "^7.14.3",
     "@babel/preset-env": "^7.14.2",
     "@babel/preset-react": "^7.13.13",
     "@babel/preset-typescript": "^7.13.0",
-    "@babel/runtime": "^7.14.0"
+    "@babel/runtime": "^7.14.0",
+    "regenerator-runtime": "^0.13.7"
   },
   "directories": {
     "lib": "lib"
