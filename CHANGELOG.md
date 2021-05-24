@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.0.9](https://github.com/owenvip/compile-tools/compare/v0.0.8...v0.0.9) (2021-05-24)
+
+### Bug Fixes
+
+- fix dev server host ([d5e05d6](https://github.com/owenvip/compile-tools/commit/d5e05d6c9d5f7d8c7fe849c9d784b835c0ce2b86))
+
 ## [0.0.8](https://github.com/owenvip/compile-tools/compare/v0.0.7...v0.0.8) (2021-05-24)
 
 ### Bug Fixes
