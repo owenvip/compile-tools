@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.0.10](https://github.com/owenvip/compile-tools/compare/v0.0.9...v0.0.10) (2021-06-02)
+
+### Bug Fixes
+
+- fix alians path ([cd91ba5](https://github.com/owenvip/compile-tools/commit/cd91ba5f32999f87d463886d124bc757206e29bf))
+
 ## [0.0.9](https://github.com/owenvip/compile-tools/compare/v0.0.8...v0.0.9) (2021-05-24)
 
 ### Bug Fixes
