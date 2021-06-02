@@ -5,7 +5,7 @@ const { resolve } = require("path");
 const CopyWebpackPlugin = require("copy-webpack-plugin");
 const ForkTsCheckerWebpackPlugin = require("fork-ts-checker-webpack-plugin");
 
-const { staticDir, entry, tplFile } = require("./paths.js");
+const { workDir, staticDir, entry, tplFile } = require("./paths.js");
 
 module.exports = {
   entry: ["regenerator-runtime/runtime.js", entry],
@@ -78,7 +78,7 @@ module.exports = {
       ".less",
     ],
     alias: {
-      "@": resolve("src"),
+      "@": resolve(workDir, "src"),
     },
   },
 };
