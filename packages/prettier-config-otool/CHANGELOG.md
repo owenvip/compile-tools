@@ -3,6 +3,10 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.0.11](https://github.com/owenvip/compile-tools/compare/v0.0.10...v0.0.11) (2021-06-07)
+
+**Note:** Version bump only for package @otools/prettier-config-otool
+
 ## [0.0.10](https://github.com/owenvip/compile-tools/compare/v0.0.9...v0.0.10) (2021-06-02)
 
 **Note:** Version bump only for package @otools/prettier-config-otool
