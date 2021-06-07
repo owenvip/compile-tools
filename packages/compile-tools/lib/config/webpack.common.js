@@ -3,7 +3,7 @@ const { VueLoaderPlugin } = require("vue-loader/dist/index");
 const HtmlWebpackPlugin = require("html-webpack-plugin");
 const { resolve } = require("path");
 const CopyWebpackPlugin = require("copy-webpack-plugin");
-const ForkTsCheckerWebpackPlugin = require("fork-ts-checker-webpack-plugin");
+// const ForkTsCheckerWebpackPlugin = require("fork-ts-checker-webpack-plugin");
 
 const { workDir, staticDir, entry, tplFile } = require("./paths.js");
 
@@ -55,7 +55,6 @@ module.exports = {
       patterns: [
         {
           from: staticDir,
-          to: "static",
         },
       ],
     }),
@@ -64,7 +63,7 @@ module.exports = {
       __VUE_OPTIONS_API__: true,
       __VUE_PROD_DEVTOOLS__: false,
     }),
-    new ForkTsCheckerWebpackPlugin(),
+    // new ForkTsCheckerWebpackPlugin(),
   ],
   resolve: {
     extensions: [

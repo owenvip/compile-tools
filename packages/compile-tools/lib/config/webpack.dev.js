@@ -5,7 +5,7 @@ const { distDir, tplFile } = require("./paths.js");
 module.exports = merge(common, {
   mode: "development",
   target: "web",
-  devtool: "inline-source-map",
+  devtool: "eval-cheap-module-source-map",
   cache: {
     type: "filesystem",
   },
@@ -31,7 +31,17 @@ module.exports = merge(common, {
         test: /\.(le|c)ss$/,
         use: [
           "style-loader",
-          "css-loader",
+          {
+            loader: "css-loader",
+            options: {
+              sourceMap: true,
+              modules: {
+                localIdentName: "[path][name]__[local]",
+                exportLocalsConvention: "camelCaseOnly",
+                auto: true,
+              },
+            },
+          },
           {
             loader: "less-loader",
             options: {
