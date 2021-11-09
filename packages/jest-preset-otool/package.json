@@ -1,6 +1,6 @@
 {
   "name": "@otools/jest-preset-otool",
-  "version": "0.0.14",
+  "version": "0.0.15",
   "description": "jest preset config",
   "keywords": [
     "jest",
