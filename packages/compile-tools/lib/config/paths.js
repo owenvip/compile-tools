@@ -1,5 +1,5 @@
 /*
- * @Descripttion: 
+ * @Descripttion:
  * @Author: OwenWong
  * @Email: owen.cq.cn@gmail.com
  * @Date: 2021-06-03 21:41:28
@@ -12,6 +12,7 @@ const staticDir = path.resolve(workDir, "static");
 const tplFile = path.resolve(workDir, "index.html");
 const entry = path.resolve(workDir, "src/index");
 const pkgPath = path.resolve(workDir, "package.json");
+const tscfgPath = path.resolve(workDir, "tsconfig.json");
 
 module.exports = {
   workDir,
@@ -20,4 +21,5 @@ module.exports = {
   tplFile,
   entry,
   pkgPath,
+  tscfgPath,
 };

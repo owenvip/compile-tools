@@ -12,7 +12,14 @@ const { resolve } = require("path");
 const CopyWebpackPlugin = require("copy-webpack-plugin");
 const ForkTsCheckerWebpackPlugin = require("fork-ts-checker-webpack-plugin");
 
-const { workDir, staticDir, entry, tplFile, pkgPath } = require("./paths");
+const {
+  workDir,
+  staticDir,
+  entry,
+  tplFile,
+  pkgPath,
+  tscfgPath,
+} = require("./paths");
 
 const { dependencies } = JSON.parse(fs.readFileSync(pkgPath, "utf8"));
 const isVue = typeof dependencies.vue === "string";
@@ -66,8 +73,11 @@ const plugins = [
     __VUE_OPTIONS_API__: true,
     __VUE_PROD_DEVTOOLS__: false,
   }),
-  new ForkTsCheckerWebpackPlugin(),
 ];
+
+if (fs.existsSync(tscfgPath)) {
+  plugins.push(new ForkTsCheckerWebpackPlugin());
+}
 
 if (isVue) {
   rules.push({

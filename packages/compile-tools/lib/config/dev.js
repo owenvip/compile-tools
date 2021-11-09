@@ -1,5 +1,5 @@
 /*
- * @Descripttion: 
+ * @Descripttion:
  * @Author: OwenWong
  * @Email: owen.cq.cn@gmail.com
  * @Date: 2021-11-08 16:42:59
@@ -22,6 +22,7 @@ module.exports = merge(common, {
     contentBase: distDir,
     overlay: true,
     open: true,
+    progress: true,
     stats: "errors-only",
     compress: true, // 为每个静态文件开启 gzip compression
     historyApiFallback: {
