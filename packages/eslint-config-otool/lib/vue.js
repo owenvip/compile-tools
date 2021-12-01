@@ -1,3 +1,9 @@
+/*
+ * @Descripttion:
+ * @Author: OwenWong
+ * @Email: owen.cq.cn@gmail.com
+ * @Date: 2021-06-03 21:41:28
+ */
 "use strict";
 
 module.exports = {
@@ -33,7 +39,6 @@ module.exports = {
         typedefs: false,
       },
     ],
-    "no-unused-vars": "off",
     "@typescript-eslint/no-unused-vars": [
       "error",
       {

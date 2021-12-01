@@ -6,7 +6,7 @@
  */
 const { merge } = require("webpack-merge");
 const common = require("./base");
-const { distDir, tplFile } = require("./paths");
+const { tplFile } = require("./paths");
 
 module.exports = merge(common, {
   mode: "development",
@@ -17,16 +17,13 @@ module.exports = merge(common, {
   },
   devServer: {
     port: 3000,
-    host: "127.0.0.1",
-    hot: true,
-    contentBase: distDir,
-    overlay: true,
-    open: true,
-    progress: true,
-    stats: "errors-only",
-    compress: true, // 为每个静态文件开启 gzip compression
+    host: "0.0.0.0",
     historyApiFallback: {
       rewrites: [{ from: /./, to: tplFile }],
+    },
+    client: {
+      overlay: true,
+      progress: true,
     },
   },
   output: {
@@ -56,4 +53,5 @@ module.exports = merge(common, {
       },
     ],
   },
+  stats: "errors-warnings",
 });

@@ -11,6 +11,7 @@ const HtmlWebpackPlugin = require("html-webpack-plugin");
 const { resolve } = require("path");
 const CopyWebpackPlugin = require("copy-webpack-plugin");
 const ForkTsCheckerWebpackPlugin = require("fork-ts-checker-webpack-plugin");
+const ESLintPlugin = require("eslint-webpack-plugin");
 
 const {
   workDir,
@@ -23,6 +24,8 @@ const {
 
 const { dependencies } = JSON.parse(fs.readFileSync(pkgPath, "utf8"));
 const isVue = typeof dependencies.vue === "string";
+
+const extensions = ["js", "ts", "jsx", "tsx", "vue", "json", "css", "less"];
 
 const rules = [
   {
@@ -73,6 +76,14 @@ const plugins = [
     __VUE_OPTIONS_API__: true,
     __VUE_PROD_DEVTOOLS__: false,
   }),
+  new ESLintPlugin({
+    extensions,
+    emitError: true,
+    emitWarning: true,
+    failOnError: true,
+    lintDirtyModulesOnly: false,
+    overrideConfigFile: resolve(workDir, ".eslintrc.js"),
+  }),
 ];
 
 if (fs.existsSync(tscfgPath)) {
@@ -94,16 +105,7 @@ module.exports = {
   },
   plugins,
   resolve: {
-    extensions: [
-      ".js",
-      ".ts",
-      ".jsx",
-      ".tsx",
-      ".vue",
-      ".json",
-      ".css",
-      ".less",
-    ],
+    extensions: extensions.map((item) => `.${item}`),
     alias: {
       "@": resolve(workDir, "src"),
     },
