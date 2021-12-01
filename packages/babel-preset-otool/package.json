@@ -1,6 +1,6 @@
 {
   "name": "@otools/babel-preset-otool",
-  "version": "0.0.17",
+  "version": "0.0.18",
   "description": "babel preset",
   "main": "lib/index.js",
   "scripts": {
