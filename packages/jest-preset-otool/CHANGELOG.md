@@ -3,6 +3,10 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.0.16](https://github.com/owenvip/compile-tools/compare/v0.0.15...v0.0.16) (2021-12-01)
+
+**Note:** Version bump only for package @otools/jest-preset-otool
+
 ## [0.0.15](https://github.com/owenvip/compile-tools/compare/v0.0.14...v0.0.15) (2021-11-09)
 
 **Note:** Version bump only for package @otools/jest-preset-otool
