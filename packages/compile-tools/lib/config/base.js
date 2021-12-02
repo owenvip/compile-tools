@@ -25,8 +25,6 @@ const {
 const { dependencies } = JSON.parse(fs.readFileSync(pkgPath, "utf8"));
 const isVue = typeof dependencies.vue === "string";
 
-const extensions = ["js", "ts", "jsx", "tsx", "vue", "json", "css", "less"];
-
 const rules = [
   {
     test: /\.(woff2?|eot|ttf|otf)(\?.*)?$/,
@@ -77,7 +75,7 @@ const plugins = [
     __VUE_PROD_DEVTOOLS__: false,
   }),
   new ESLintPlugin({
-    extensions,
+    extensions: ["js", "ts", "jsx", "tsx", "vue", "json"],
     emitError: true,
     emitWarning: true,
     failOnError: true,
@@ -105,7 +103,16 @@ module.exports = {
   },
   plugins,
   resolve: {
-    extensions: extensions.map((item) => `.${item}`),
+    extensions: [
+      ".js",
+      ".ts",
+      ".jsx",
+      ".tsx",
+      ".vue",
+      ".json",
+      ".css",
+      ".less",
+    ],
     alias: {
       "@": resolve(workDir, "src"),
     },

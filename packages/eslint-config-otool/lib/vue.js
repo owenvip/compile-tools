@@ -9,8 +9,46 @@ const path = require("path");
 const tscfgPath = path.resolve(process.cwd(), "tsconfig.json");
 
 const extendsPlugins = ["plugin:vue/vue3-essential", "eslint:recommended"];
+let rules = {
+  "default-case": "off",
+  "no-dupe-class-members": "off",
+  "no-undef": "off",
+  "no-array-constructor": "off",
+  "no-use-before-define": "off",
+  "no-useless-constructor": "off",
+  "prettier/prettier": "error",
+  "standard/no-callback-literal": "off",
+};
+const tsRules = {
+  "default-case": "off",
+  "@typescript-eslint/consistent-type-assertions": "warn",
+  "@typescript-eslint/no-array-constructor": "warn",
+  "@typescript-eslint/no-namespace": "error",
+  "@typescript-eslint/no-use-before-define": [
+    "error",
+    {
+      functions: false,
+      classes: false,
+      variables: false,
+      typedefs: false,
+    },
+  ],
+  "@typescript-eslint/no-unused-vars": [
+    "error",
+    {
+      args: "none",
+      ignoreRestSiblings: true,
+    },
+  ],
+  "@typescript-eslint/no-useless-constructor": "warn",
+  "@typescript-eslint/explicit-function-return-type": "off",
+  "@typescript-eslint/explicit-module-boundary-types": "off",
+  "@typescript-eslint/member-delimiter-style": "off",
+  "@typescript-eslint/no-explicit-any": "off",
+};
 if (fs.existsSync(tscfgPath)) {
   extendsPlugins.push("@vue/typescript");
+  rules = Object.assign(rules, tsRules);
 }
 
 const config = {
@@ -24,40 +62,7 @@ const config = {
   parserOptions: {
     ecmaVersion: 2020,
   },
-  rules: {
-    "default-case": "off",
-    "no-dupe-class-members": "off",
-    "no-undef": "off",
-    "@typescript-eslint/consistent-type-assertions": "warn",
-    "no-array-constructor": "off",
-    "@typescript-eslint/no-array-constructor": "warn",
-    "@typescript-eslint/no-namespace": "error",
-    "no-use-before-define": "off",
-    "@typescript-eslint/no-use-before-define": [
-      "error",
-      {
-        functions: false,
-        classes: false,
-        variables: false,
-        typedefs: false,
-      },
-    ],
-    "@typescript-eslint/no-unused-vars": [
-      "error",
-      {
-        args: "none",
-        ignoreRestSiblings: true,
-      },
-    ],
-    "no-useless-constructor": "off",
-    "@typescript-eslint/no-useless-constructor": "warn",
-    "prettier/prettier": "error",
-    "standard/no-callback-literal": "off",
-    "@typescript-eslint/explicit-function-return-type": "off",
-    "@typescript-eslint/explicit-module-boundary-types": "off",
-    "@typescript-eslint/member-delimiter-style": "off",
-    "@typescript-eslint/no-explicit-any": "off",
-  },
+  rules,
   overrides: [
     {
       files: [
