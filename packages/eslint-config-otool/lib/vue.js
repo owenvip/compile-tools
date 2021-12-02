@@ -5,18 +5,21 @@
  * @Date: 2021-06-03 21:41:28
  */
 "use strict";
+const path = require("path");
+const tscfgPath = path.resolve(process.cwd(), "tsconfig.json");
 
-module.exports = {
+const extendsPlugins = ["plugin:vue/vue3-essential", "eslint:recommended"];
+if (fs.existsSync(tscfgPath)) {
+  extendsPlugins.push("@vue/typescript");
+}
+
+const config = {
   root: true,
   env: {
     node: true,
   },
   ignorePatterns: ["**/dist/**", "**/build/**", "**/static/**"],
-  extends: [
-    "plugin:vue/vue3-essential",
-    "eslint:recommended",
-    "@vue/typescript",
-  ],
+  extends: extendsPlugins,
   plugins: ["prettier"],
   parserOptions: {
     ecmaVersion: 2020,
@@ -67,3 +70,5 @@ module.exports = {
     },
   ],
 };
+
+module.exports = config;
