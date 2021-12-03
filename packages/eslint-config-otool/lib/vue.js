@@ -5,6 +5,7 @@
  * @Date: 2021-06-03 21:41:28
  */
 "use strict";
+const fs = require("fs");
 const path = require("path");
 const tscfgPath = path.resolve(process.cwd(), "tsconfig.json");
 
