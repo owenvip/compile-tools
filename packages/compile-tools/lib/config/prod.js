@@ -1,5 +1,5 @@
 /*
- * @Descripttion:
+ * @Description:
  * @Author: OwenWong
  * @Email: owen.cq.cn@gmail.com
  * @Date: 2021-06-03 21:41:28
@@ -11,6 +11,18 @@ const { merge } = require("webpack-merge");
 const common = require("./base");
 const { workDir, distDir } = require("./paths");
 const WorkboxPlugin = require("workbox-webpack-plugin");
+
+const cssLoaders = [
+  {
+    loader: MiniCssExtractPlugin.loader,
+    options: {
+      // you can specify a publicPath here
+      // by default it use publicPath in webpackOptions.output
+      publicPath: workDir,
+    },
+  },
+  "css-loader",
+];
 
 module.exports = merge(common, {
   mode: "production",
@@ -48,17 +60,13 @@ module.exports = merge(common, {
   module: {
     rules: [
       {
-        test: /\.(le|c)ss$/,
+        test: /\.css$/,
+        use: cssLoaders,
+      },
+      {
+        test: /\.less$/,
         use: [
-          {
-            loader: MiniCssExtractPlugin.loader,
-            options: {
-              // you can specify a publicPath here
-              // by default it use publicPath in webpackOptions.output
-              publicPath: workDir,
-            },
-          },
-          "css-loader",
+          ...cssLoaders,
           {
             loader: "postcss-loader",
             options: {

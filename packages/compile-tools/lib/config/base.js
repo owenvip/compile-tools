@@ -1,5 +1,5 @@
 /*
- * @Descripttion:
+ * @Description:
  * @Author: OwenWong
  * @Email: owen.cq.cn@gmail.com
  * @Date: 2021-06-03 21:41:28
@@ -26,6 +26,10 @@ const { dependencies } = JSON.parse(fs.readFileSync(pkgPath, "utf8"));
 const isVue = typeof dependencies.vue === "string";
 
 const rules = [
+  {
+    test: /\.mjs$/i,
+    resolve: { byDependency: { esm: { fullySpecified: false } } },
+  },
   {
     test: /\.(woff2?|eot|ttf|otf)(\?.*)?$/,
     type: "asset",
@@ -104,6 +108,7 @@ module.exports = {
   plugins,
   resolve: {
     extensions: [
+      ".mjs",
       ".js",
       ".ts",
       ".jsx",

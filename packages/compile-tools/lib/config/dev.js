@@ -1,5 +1,5 @@
 /*
- * @Descripttion:
+ * @Description:
  * @Author: OwenWong
  * @Email: owen.cq.cn@gmail.com
  * @Date: 2021-11-08 16:42:59
@@ -7,6 +7,8 @@
 const { merge } = require("webpack-merge");
 const common = require("./base");
 const { tplFile } = require("./paths");
+
+const cssLoaders = ["style-loader", "css-loader"];
 
 module.exports = merge(common, {
   mode: "development",
@@ -36,10 +38,13 @@ module.exports = merge(common, {
   module: {
     rules: [
       {
-        test: /\.(le|c)ss$/,
+        test: /\.css$/,
+        use: cssLoaders,
+      },
+      {
+        test: /\.less$/,
         use: [
-          "style-loader",
-          "css-loader",
+          ...cssLoaders,
           {
             loader: "less-loader",
             options: {
