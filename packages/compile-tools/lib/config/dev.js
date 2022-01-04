@@ -6,7 +6,6 @@
  */
 const { merge } = require("webpack-merge");
 const common = require("./base");
-const { tplFile } = require("./paths");
 
 const cssLoaders = ["style-loader", "css-loader"];
 
@@ -24,9 +23,7 @@ module.exports = merge(common, {
     headers: {
       "Access-Control-Allow-Origin": "*",
     },
-    historyApiFallback: {
-      rewrites: [{ from: /./, to: tplFile }],
-    },
+    historyApiFallback: true,
     client: {
       overlay: true,
       progress: true,
