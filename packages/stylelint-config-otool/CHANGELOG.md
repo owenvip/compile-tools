@@ -3,6 +3,10 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.0.23](https://github.com/owenvip/compile-tools/compare/v0.0.22...v0.0.23) (2022-01-04)
+
+**Note:** Version bump only for package @otools/stylelint-config-otool
+
 ## [0.0.22](https://github.com/owenvip/compile-tools/compare/v0.0.21...v0.0.22) (2021-12-08)
 
 **Note:** Version bump only for package @otools/stylelint-config-otool
