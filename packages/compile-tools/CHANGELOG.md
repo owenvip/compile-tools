@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.0.24](https://github.com/owenvip/compile-tools/compare/v0.0.23...v0.0.24) (2022-01-05)
+
+### Bug Fixes
+
+- fix css config ([b0099c8](https://github.com/owenvip/compile-tools/commit/b0099c84ca55de72c9a067f48940bcf2b8b54ecd))
+
 ## [0.0.23](https://github.com/owenvip/compile-tools/compare/v0.0.22...v0.0.23) (2022-01-04)
 
 ### Bug Fixes

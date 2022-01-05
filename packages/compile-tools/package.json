@@ -1,6 +1,6 @@
 {
   "name": "@otools/compile-tools",
-  "version": "0.0.23",
+  "version": "0.0.24",
   "description": "react compile tools",
   "main": "lib/index.js",
   "repository": {
@@ -20,11 +20,11 @@
   "author": "owenwong <owen.wong.cn@gmail.com>",
   "license": "MIT",
   "dependencies": {
-    "@otools/babel-preset-otool": "^0.0.23",
-    "@otools/eslint-config-otool": "^0.0.23",
-    "@otools/jest-preset-otool": "^0.0.23",
-    "@otools/prettier-config-otool": "^0.0.23",
-    "@otools/stylelint-config-otool": "^0.0.23",
+    "@otools/babel-preset-otool": "^0.0.24",
+    "@otools/eslint-config-otool": "^0.0.24",
+    "@otools/jest-preset-otool": "^0.0.24",
+    "@otools/prettier-config-otool": "^0.0.24",
+    "@otools/stylelint-config-otool": "^0.0.24",
     "@vue/babel-plugin-jsx": "^1.0.6",
     "@vue/compiler-sfc": "^3.2.21",
     "autoprefixer": "^10.2.5",
