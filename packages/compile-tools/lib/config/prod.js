@@ -9,17 +9,12 @@ const CssMinimizerPlugin = require("css-minimizer-webpack-plugin");
 const UglifyJsPlugin = require("uglifyjs-webpack-plugin");
 const { merge } = require("webpack-merge");
 const common = require("./base");
-const { workDir, distDir } = require("./paths");
+const { distDir } = require("./paths");
 const WorkboxPlugin = require("workbox-webpack-plugin");
 
 const cssLoaders = [
   {
     loader: MiniCssExtractPlugin.loader,
-    options: {
-      // you can specify a publicPath here
-      // by default it use publicPath in webpackOptions.output
-      publicPath: workDir,
-    },
   },
   "css-loader",
 ];
