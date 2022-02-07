@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.0.25](https://github.com/owenvip/compile-tools/compare/v0.0.24...v0.0.25) (2022-02-07)
+
+### Bug Fixes
+
+- fix dev output path ([0ce9bd4](https://github.com/owenvip/compile-tools/commit/0ce9bd48524fa10ee31f8350b1c4f55e7392d6dd))
+
 ## [0.0.24](https://github.com/owenvip/compile-tools/compare/v0.0.23...v0.0.24) (2022-01-05)
 
 ### Bug Fixes

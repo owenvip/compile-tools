@@ -1,6 +1,6 @@
 {
   "name": "@otools/eslint-config-otool",
-  "version": "0.0.24",
+  "version": "0.0.25",
   "description": "eslint config",
   "author": "owenwong <owen.wong.cn@gmail.com>",
   "license": "MIT",
